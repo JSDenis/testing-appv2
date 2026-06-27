@@ -3,10 +3,10 @@ name: Lab5 CI and Deploy
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master 
+      - main
 
 jobs:
   test:
@@ -52,7 +52,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
 
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
 
     permissions:
       contents: write
